@@ -43,3 +43,4 @@ The framework was rigorously evaluated using the **CheXlocalize** dataset (radio
 
 ## 4. Read the Full Thesis
 For a comprehensive breakdown of the threshold derivations, likelihood-ratio calibrations, and per-pathology performance metrics, please refer to the [MSc_Thesis.pdf](MSc_Thesis.pdf) included in this repository.
+https://repository.ihu.gr/items/969cb98a-ca0c-448a-8568-ffe8cdb17726
