@@ -17,6 +17,8 @@ By combining a **Vision Transformer (ViT)** classifier with a multi-method salie
 * **Multi-Method Saliency:** Generates heatmaps using Grad-CAM++, GradientSHAP, and Occlusion sensitivity.
 * **Anatomical Grid:** Saliency signals are aggregated into a 6-zone anatomical representation (Left/Right $\times$ Upper/Mid/Lower lung).
 * **Fusion Strategy ($Mean Top-1^{2}$):** Introduces a novel, pathology-aware squared fusion strategy that exponentially rewards the most reliable saliency methods, suppressing noisy artifacts.
+<img width="1028" height="943" alt="image" src="https://github.com/user-attachments/assets/5460df08-ddec-4d6e-9f34-079c81c22067" />
+<img width="2000" height="580" alt="image" src="https://github.com/user-attachments/assets/06efc46e-6ecf-42e0-99bd-42a4cb8f318f" />
 
 ### Phase 3: Decision-Zone Modeling
 Model probabilities are calibrated via temperature scaling and stratified into four clinically meaningful decision zones validated via population-level likelihood ratios ($LR^+$):
@@ -24,6 +26,7 @@ Model probabilities are calibrated via temperature scaling and stratified into f
 2. **Zone 1a (Indeterminate):** Triggers safely hedged uncertainty language (e.g., "cannot exclude").
 3. **Zone 1b (Suggestive):** Uses cautious reporting language (e.g., "probable").
 4. **Zone 2 (Rule-in):** Permits conclusive, assertive phrasing.
+<img width="1121" height="769" alt="image" src="https://github.com/user-attachments/assets/b006ff4a-9509-4b16-b8e8-9cd4ecb2a6fe" />
 
 ### Phase 4: Constrained LLM Report Generation
 The extracted anatomical zones and decision-zone confidence bands are fed into a strictly constrained prompt template. The LLM (`gpt-4o-mini`) is forced to rely *only* on the provided structured evidence, effectively mitigating hallucinated findings and overconfident language.
@@ -40,6 +43,7 @@ The framework was rigorously evaluated using the **CheXlocalize** dataset (radio
 * **Reclaiming Sensitivity Through Safety:** Strict NLP evaluators (like CheXbert) often penalize safely hedged language (Zone 1a) as false positives. However, treating these indeterminate predictions as diagnostic safety-nets recovers high effective sensitivity.
 * **Mitigating Automation Bias:** By preventing the LLM from outputting hallucinated certainties on borderline radiographs, the system prioritizes clinical safety over narrative completeness, effectively bridging visual evidence with trustworthy text generation.
 
+<img width="1160" height="733" alt="image" src="https://github.com/user-attachments/assets/62a09e1b-8f5f-438b-a76e-f518c3935c41" />
 
 ## 4. Read the Full Thesis
 For a comprehensive breakdown of the threshold derivations, likelihood-ratio calibrations, and per-pathology performance metrics, please refer to the [MSc_Thesis.pdf](MSc_Thesis.pdf) included in this repository.
