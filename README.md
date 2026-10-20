@@ -36,8 +36,8 @@ The extracted anatomical zones and decision-zone confidence bands are fed into a
 The framework was rigorously evaluated using the **CheXlocalize** dataset (radiologist-annotated polygons) for spatial localization and **CheXbert** for report-level NLP fidelity.
 
 ### Localization Performance
-* The $Mean Top-1^{2}$ fusion strategy successfully retrieved **~80% of the absolute maximum achievable ground-truth abnormality mass** using only the Top-1 predicted anatomical zone.
-* Expanding to the Top-2 predicted zones captured **~85%** of the achievable limit, proving that pathology-aware fusion yields highly robust spatial grounding.
+* The $Mean Top-1^{2}$ fusion strategy successfully retrieved **~45%** of the total abnormality (max possible is 56%) using only the Top-1 predicted anatomical zone.
+* Expanding to the Top-2 predicted zones captured **~71%** of the total abnormality (max possible is 83%), proving that pathology-aware fusion yields highly robust spatial grounding.
 
 ### Report Generation & Clinical Safety
 * **Reclaiming Sensitivity Through Safety:** Strict NLP evaluators (like CheXbert) often penalize safely hedged language (Zone 1a) as false positives. However, treating these indeterminate predictions as diagnostic safety-nets recovers high effective sensitivity.
