@@ -17,7 +17,7 @@ By combining a **Vision Transformer (ViT)** classifier with a multi-method salie
 * **Multi-Method Saliency:** Generates heatmaps using Grad-CAM++, GradientSHAP, and Occlusion sensitivity.
 * **Anatomical Grid:** Saliency signals are aggregated into a 6-zone anatomical representation (Left/Right $\times$ Upper/Mid/Lower lung).
 * **Fusion Strategy ($Mean Top-1^{2}$):** Introduces a novel, pathology-aware squared fusion strategy that exponentially rewards the most reliable saliency methods, suppressing noisy artifacts.
-<img width="650" height="400" alt="image" src="https://github.com/user-attachments/assets/5460df08-ddec-4d6e-9f34-079c81c22067" />
+<img width="650" height="800" alt="image" src="https://github.com/user-attachments/assets/5460df08-ddec-4d6e-9f34-079c81c22067" />
 <img width="2000" height="580" alt="image" src="https://github.com/user-attachments/assets/06efc46e-6ecf-42e0-99bd-42a4cb8f318f" />
 
 ### Phase 3: Decision-Zone Modeling
