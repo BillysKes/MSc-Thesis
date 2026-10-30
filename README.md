@@ -30,7 +30,7 @@ Model probabilities are calibrated via temperature scaling and stratified into f
 
 ### Phase 4: Constrained LLM Report Generation
 The extracted anatomical zones and decision-zone confidence bands are fed into a strictly constrained prompt template. The LLM (`gpt-4o-mini`) is forced to rely *only* on the provided structured evidence, effectively mitigating hallucinated findings and overconfident language.
-<img width="956" height="1020" alt="image" src="https://github.com/user-attachments/assets/b6a58a46-95f4-47ed-b98e-cc5c9e478848" />
+<img width="1020" height="1020" alt="image" src="https://github.com/user-attachments/assets/b6a58a46-95f4-47ed-b98e-cc5c9e478848" />
 <img width="1046" height="618" alt="image" src="https://github.com/user-attachments/assets/a466131a-1f76-4399-8c78-f92d07fc7678" />
 
 ## 3. Evaluation & Key Results
